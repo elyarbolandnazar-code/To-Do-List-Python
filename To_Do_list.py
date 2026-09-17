@@ -33,7 +33,7 @@ def get_priority():
     else:
             print("گزينه نامعتبر است.")
             return None
-    
+    return priority_text
                 
 def add_task():
     task = input("کار جدید را وارد کنید.")
