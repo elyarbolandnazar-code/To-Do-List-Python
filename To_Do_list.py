@@ -53,6 +53,14 @@ def load_tasks():
                                 if len(parts)==2:
                                         tasks.append(parts)
 
+def sort_by_priority(task):
+    if task[1] == "🔴":
+        return 1
+    elif task[1] == "🟠":
+        return 2
+    elif task[1] == "🟢":
+        return 3
+
 def show_tasks():
     print("لیست کار ها:\n")
         
