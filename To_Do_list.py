@@ -98,7 +98,8 @@ def delete_task():
     if number is None:
         return
 
-    tasks.pop(number - 1)
+    selected_task = sorted_tasks[number - 1]
+    tasks.remove(selected_task)
     save_tasks()
     print("کار حذف شد.")
     show_tasks()
