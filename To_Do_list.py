@@ -68,8 +68,11 @@ def show_tasks():
         print("هیچ کاری ثبت نشده است.")
             
     else:
-        for i, task in enumerate(tasks, start = 1):
-            print(f"{i}. {task[0]} {task[1]}")
+        sorted_tasks = sorted(tasks, key=sort_by_priority)
+
+        for i, task in enumerate(sorted_tasks, start=1):
+            print(f"{i}. {task[0]}{task[1]}")
+
 
 def get_number():
     try:
