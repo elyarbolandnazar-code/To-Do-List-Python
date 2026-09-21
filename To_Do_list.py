@@ -92,7 +92,7 @@ def delete_task():
         return
 
     show_tasks()
-
+    sorted_tasks=sorted(tasks, key=sort_by_priority)
     number = get_number()
 
     if number is None:
