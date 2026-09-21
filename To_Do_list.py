@@ -110,6 +110,7 @@ def edit_task():
             
     else:
         show_tasks()
+        sorted_tasks=sorted(tasks, key=sort_by_priority)
         number = get_number()
         
         if number is None:
@@ -121,9 +122,10 @@ def edit_task():
         priority=get_priority()
         if priority is None:
             return
-
-        tasks[number - 1][0] = new_task
-        tasks[number - 1][1] = priority
+        
+        selected_task=sorted_tasks[number - 1]
+        selected_task[0]=new_task
+        selected_task[1]=priority
             
         save_tasks()
         print("کار با موفقیت ویرایش شد.")
@@ -135,16 +137,19 @@ def complete_task():
         print("هیچ کاری ثبت نشده است.")
     else:
         show_tasks()
+        sorted_tasks=sorted(tasks, key=sort_by_priority)
         number = get_number()
         if number is None:
                 return
 
-        if tasks[number - 1][0].startswith("✔"):
+        selected_task=sorted_tasks[number - 1]
+
+        if selected_task[0].startswith("✔"):
             print("این کار قبلاً انجام شده است.")
         else:
-            tasks[number - 1][0] = "✔ " + tasks[number - 1][0]
+            selected_task[0] = "✔ " + selected_task[0]
             save_tasks()
-            print("کار به عنوان انجام‌شده علامت‌گذاری شد.")
+            print("کاربه عنوان انجام‌شده علامت‌گذاری شد.")
             show_tasks()
 
 def search_task():
