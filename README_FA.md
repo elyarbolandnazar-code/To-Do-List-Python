@@ -304,4 +304,4 @@ To-Do-List-Python/
 
 ---
 
-🇬🇧 "English Version" (README.md)
+🇬🇧 [English Version](README.md)
