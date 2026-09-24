@@ -304,4 +304,4 @@ Built with Python 🐍
 
 ---
 
-🇮🇷 "نسخهٔ فارسی" (README_FA.md)
+🇮🇷 [نسخهٔ فارسی](README_FA.md)
