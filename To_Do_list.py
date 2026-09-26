@@ -6,11 +6,11 @@ def show_menu():
         print("=====To_Do list=====")
         print("1.افزودن کار")
         print("2.نمایش کارها")
-        print("3.خروج")
-        print("4.حذف کار")
-        print("5.ویرایش کار")
-        print("6.علامت زدن کارهای انجام‌شده ")
-        print("7.جستجوی کار")
+        print("3.حذف کار")
+        print("4.ویرایش کار")
+        print("5.علامت زدن کارهای انجام‌شده")
+        print("6.جستجوی کار")
+        print("7.خروج")
 
 def save_tasks():
         with open("tasks.txt", "w", encoding="utf-8") as file:
@@ -184,20 +184,20 @@ while True:
                 show_tasks()
                                 
         elif choice in ["3", "۳"]:
-                print("خروج از برنامه.")
-                break
+                delete_task()   
 
         elif choice in ["4", "۴"]:
-                delete_task()
-                
-        elif choice in ["5", "۵"]:
                 edit_task()
                 
-        elif choice in ["6", "۶"]:
+        elif choice in ["5", "۵"]:
                 complete_task()
 
-        elif choice in ["7", "۷"]:
+        elif choice in ["6", "۶"]:
                 search_task()
+                
+        elif choice in ["7", "۷"]:
+                print("خروج از برنامه.")
+                break                
 
         else:
                 print("گزینه نامعتبر است.")
