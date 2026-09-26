@@ -176,7 +176,7 @@ load_tasks()
 while True:
         show_menu()
 
-        choice = int(input("Your choice:"))
+        choice = input("Your choice:")
         if choice == "1":
                 add_task()
                 
