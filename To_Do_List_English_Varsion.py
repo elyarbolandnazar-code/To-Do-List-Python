@@ -24,11 +24,11 @@ def get_priority():
     priority=input("Select task priority: ")
     
     
-    if priority == 1:
+    if priority == "1":
             priority_text="🔴"
-    elif priority == 2:
+    elif priority == "2":
             priority_text="🟠"
-    elif priority == 3:
+    elif priority == "3":
             priority_text="🟢"
     else:
             print("Invalid option.")
@@ -177,25 +177,25 @@ while True:
         show_menu()
 
         choice = int(input("Your choice:"))
-        if choice == 1:
+        if choice == "1":
                 add_task()
                 
-        elif choice == 2:
+        elif choice == "2":
                 show_tasks()
                                 
-        elif choice == 3:
+        elif choice == "3":
                 delete_task()   
 
-        elif choice == 4:
+        elif choice == "4":
                 edit_task()
                 
-        elif choice == 5:
+        elif choice == "5":
                 complete_task()
 
-        elif choice == 6:
+        elif choice == "6":
                 search_task()
                 
-        elif choice == 7:
+        elif choice == "7":
                 print("Exiting the program.")
                 break                
 
